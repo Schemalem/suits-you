@@ -1,4 +1,35 @@
   
-<h1><%= @suit.colour %> 💸<%= @suit.price %></h1>
-<p><%= @suit.occasion %></p> 
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @suit.brand %>
+</p>
+
+<p>
+  <strong>Price</strong>
+  <%= @suit.price %>
+</p>
+
+<p>
+  <strong>Style:</strong>
+  <%= @suit.style %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @suit.size %>
+</p>
+
+<p>
+  <strong>Occasion:</strong>
+  <%= @suit.occasion %>
+</p>
+
+<p>
+  <strong>Colour:</strong>
+  <%= @suit.colour %>
+</p>
+
+<%= link_to 'Delete', suit_path(@suit), method: :delete %>
 <%= link_to 'Back', suits_path %>
