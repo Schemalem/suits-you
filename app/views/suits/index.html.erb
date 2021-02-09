@@ -19,6 +19,8 @@
         <td><%= suit.brand %></td>
         <td><%= suit.price %></td>
         <td><%= link_to 'Show', suit %></td>
+        <td><%= link_to 'Edit', edit_suit_path(suit) %></td>
+        <td><%= link_to 'Destroy', suit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

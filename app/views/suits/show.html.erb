@@ -31,5 +31,5 @@
   <%= @suit.colour %>
 </p>
 
-<%= link_to 'New Suit', new_suit_path %>
+<%= link_to 'Delete', suit_path(@suit), method: :delete %>
 <%= link_to 'Back', suits_path %>
