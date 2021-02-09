@@ -1,1 +1,7 @@
-edit.html.erb
+<%= simple_form_for [ @suit, @booking ] do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.input :status, collection: ["ordered", "approved", "shipped", "delivered"]%>
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>
+
