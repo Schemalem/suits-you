@@ -2,9 +2,9 @@ class Booking < ApplicationRecord
   belongs_to :suit
   belongs_to :user
 
-  validates :start_date_cannot_be_in_the_past, presence: true
-  validates :end_date_cannot_be_before_start_date, presence: true
-  validates :status, presence: true, inclusion: { in: %w[ordered approved shipped delivered] }
+  validate :start_date_cannot_be_in_the_past
+  validate :end_date_cannot_be_before_start_date
+  validates :status, presence: true, inclusion: { in: %w[Ordered Approved Shipped Delivered] }
   validates :start_date, presence: true
   validates :end_date, presence: true
 
