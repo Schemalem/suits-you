@@ -1,6 +1,4 @@
-  
 <p id="notice"><%= notice %></p>
-
 <p>
   <strong>Brand:</strong>
   <%= @suit.brand %>
@@ -30,6 +28,10 @@
   <strong>Colour:</strong>
   <%= @suit.colour %>
 </p>
+
+<% @suit.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
 
 <%= link_to 'Delete', suit_path(@suit), method: :delete %>
 <%= link_to 'Back', suits_path %>
