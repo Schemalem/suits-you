@@ -1,0 +1,9 @@
+
+<p> <%= @booking.status %></p>
+<p> <%= @booking.start_date %> </p>
+<p> <%= @booking.end_date %> </p>
+
+<p><%= @booking.suit.size %></p>
+
+<p><%= link_to "Delete", booking_path(@booking), method: :delete, data: { confirm: "Are you sure?" } %></p>
+<p>testing for push</p>
