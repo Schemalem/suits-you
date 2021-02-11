@@ -1,6 +1,4 @@
-  
-<p id="notice"><%= notice %></p>
-
+<!-- create a header and add a nav bar -->
 <p>
   <strong>Brand:</strong>
   <%= @suit.brand %>
@@ -31,5 +29,13 @@
   <%= @suit.colour %>
 </p>
 
-<%= link_to 'Delete', suit_path(@suit), method: :delete %>
-<%= link_to 'Back', suits_path %>
+<div class="navigation">
+  <p><%= link_to 'Book this suit', new_suit_booking_path(@suit) %></p>
+  <p><%= link_to 'Edit', edit_suit_path %>
+  <p><%= link_to 'See all bookings', bookings_path %>
+    <!-- show only bookings for this suit -->
+  <p><%= link_to 'Delete', suit_path(@suit), method: :delete %></p>
+  <p><%= link_to 'Back', suits_path %></p>
+<!-- edit this suit -->
+</div>
+<!-- add a footer -->

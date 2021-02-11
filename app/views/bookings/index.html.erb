@@ -1,1 +1,37 @@
-<h1>Testing</h1>
+<!-- create a header and add a nav bar -->
+
+<h1> My bookings </h1>
+
+<div class="container">
+  <table class="table">
+    <tbody>
+      <thead>
+        <th>Suit name</th>
+        <th>Start date</th>
+        <th>End date</th>
+        <th>Status</th>
+      </thead>
+      <% @bookings.each do |booking| %>
+        <tr>
+          <td>"name of the suit"</td>
+          <td><%= booking.start_date %></td>
+          <td><%= booking.end_date %></td>
+          <td><%= booking.status  %></td>
+          <td>
+          <td><%= link_to "Show details", booking %></td>
+          <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
+          <td><%= link_to 'Delete booking' , method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="navigation-bar">
+  <p><%= link_to "My suits", suits_path %></p>
+  <p><%= link_to "Back to home page", root_path %> </p>
+</div>
+
+
+<!-- add a footer -->
