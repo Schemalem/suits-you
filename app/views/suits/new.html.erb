@@ -1,3 +1,9 @@
-<%= render "form", suit: @suit %>
+<!-- create a header and add a nav bar -->
+<div class="form">
+  <%= render "form", suit: @suit %>
+</div>
 
-<%= link_to 'Back', suits_path %>
+<div class="navigation">
+  <p><%= link_to 'Back', suits_path %></p>
+</div>
+<!-- add a footer -->

@@ -46,6 +46,7 @@ class BookingsController < ApplicationController
 
   def booking_params
     params.require(:booking).permit(:status, :start_date, :end_date)
+    #remove :status permit, as it should be defaulted to "ordered"
   end
 
   def booking_params_new

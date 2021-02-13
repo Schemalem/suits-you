@@ -1,9 +1,13 @@
-
+<!-- create a header and add a nav bar -->
 <p> <%= @booking.status %></p>
 <p> <%= @booking.start_date %> </p>
 <p> <%= @booking.end_date %> </p>
 
-<p><%= @booking.suit.size %></p>
+<div class="navigation-bar">
+  <p><%= link_to "Edit", edit_booking_path%></p>
+  <p><%= link_to "Delete", booking_path(@booking), method: :delete, data: { confirm: "Are you sure?" } %></p>
+  <p><%= link_to "Back", suits_path %></p> <!-- link to an actual suit, not My suits -->
+</div>
+<!-- all the suit details -->
+<!-- add a footer -->
 
-<p><%= link_to "Delete", booking_path(@booking), method: :delete, data: { confirm: "Are you sure?" } %></p>
-<p>testing for push</p>

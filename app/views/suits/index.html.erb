@@ -1,33 +1,37 @@
+<!-- create a header and add a nav bar -->
+<h1>My Suits</h1>
 
-<p id="notice"><%= notice %></p>
-
-<h1>Suits</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Brand</th>
-      <th>Price</th>
-      <th>Style</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @suits.each do |suit| %>
+<div class="container">
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= suit.name %></td>
-        <td><%= suit.brand %></td>
-        <td><%= suit.price %></td>
-        <td><%= link_to 'Show', suit %></td>
-        <td><%= link_to 'Edit', edit_suit_path(suit) %></td>
-        <td><%= link_to 'Destroy', suit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Brand</th>
+        <th>Price</th>
+        <th>Style</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @suits.each do |suit| %>
+        <tr>
+          <td><%= suit.name %></td>
+          <td><%= suit.brand %></td>
+          <td><%= suit.price %></td>
+          <td><%= suit.style  %></td>
+          <td><%= link_to 'Show', suit %></td>
+          <td><%= link_to 'Edit', edit_suit_path(suit) %></td>
+          <td><%= link_to 'Destroy', suit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 
-<%= link_to 'New Suit', new_suit_path %>
+<div class="navigation">
+  <p><%= link_to 'New Suit', new_suit_path %> </p>
+  <p><%= link_to "Back to home page", root_path %> </p>
+</div>
+
+<!-- add a footer -->
