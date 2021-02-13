@@ -1,51 +1,50 @@
-<!-- create a header and add a nav bar -->
-<p>
-  <strong>Name:</strong>
-  <%= @suit.name %>
-</p>
+<div class="container">
+  <p>
+    <strong>Name:</strong>
+    <%= @suit.name %>
+  </p>
 
-<p>
-  <strong>Brand:</strong>
-  <%= @suit.brand %>
-</p>
+  <p>
+    <strong>Brand:</strong>
+    <%= @suit.brand %>
+  </p>
 
-<p>
-  <strong>Price</strong>
-  <%= @suit.price %>
-</p>
+  <p>
+    <strong>Price</strong>
+    <%= @suit.price %>
+  </p>
 
-<p>
-  <strong>Style:</strong>
-  <%= @suit.style %>
-</p>
+  <p>
+    <strong>Style:</strong>
+    <%= @suit.style %>
+  </p>
 
-<p>
-  <strong>Size:</strong>
-  <%= @suit.size %>
-</p>
+  <p>
+    <strong>Size:</strong>
+    <%= @suit.size %>
+  </p>
 
-<p>
-  <strong>Occasion:</strong>
-  <%= @suit.occasion %>
-</p>
+  <p>
+    <strong>Occasion:</strong>
+    <%= @suit.occasion %>
+  </p>
 
-<p>
-  <strong>Colour:</strong>
-  <%= @suit.colour %>
-</p>
+  <p>
+    <strong>Colour:</strong>
+    <%= @suit.colour %>
+  </p>
 
-<% @suit.photos.each do |photo| %>
-  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-<% end %>
+  <% @suit.photos.each do |photo| %>
+    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
 
-<div class="navigation">
-  <p><%= link_to 'Book this suit', new_suit_booking_path(@suit) %></p>
-  <p><%= link_to 'Edit', edit_suit_path %>
-  <p><%= link_to 'See all bookings', bookings_path %>
-    <!-- show only bookings for this suit -->
-  <p><%= link_to 'Delete', suit_path(@suit), method: :delete %></p>
-  <p><%= link_to 'Back', suits_path %></p>
-<!-- edit this suit -->
+  <div class="navigation">
+    <p><%= link_to 'Book this suit', new_suit_booking_path(@suit), class: "btn btn-orange" %></p>
+    <p><%= link_to 'Edit', edit_suit_path %>
+    <p><%= link_to 'See all bookings', bookings_path %>
+      <!-- show only bookings for this suit -->
+    <p><%= link_to 'Delete', suit_path(@suit), method: :delete %></p>
+    <p><%= link_to 'Back', suits_path %></p>
+  <!-- edit this suit -->
+  </div>
 </div>
-<!-- add a footer -->
-

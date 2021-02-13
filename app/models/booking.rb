@@ -12,11 +12,11 @@ class Booking < ApplicationRecord
     if start_date.present? && start_date < Date.today
       errors.add(:start_date, "can't be in the past")
     end
-  end    
+  end
 
   def end_date_cannot_be_before_start_date
     if end_date < start_date
       errors.add(:end_date, "can't be in the past")
     end
-  end    
+  end
 end

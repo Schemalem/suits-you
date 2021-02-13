@@ -1,16 +1,15 @@
-<!-- create a header and add a nav bar -->
-<div class="form">
-  <%= simple_form_for(suit) do |f| %>
-    <%= f.input :name %>
-    <%= f.input :size %>
-    <%= f.input :colour %>
-    <%= f.input :style %>
-    <%= f.input :occasion, collection: [ "interview", "funeral", "wedding", "party", "date"]%>
-    <%= f.input :price %>
-    <%= f.input :brand %>
-    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-    <%= f.submit %>
-  <% end %>
+<div class="container">
+  <div class="form">
+    <%= simple_form_for(suit) do |f| %>
+      <%= f.input :name, placeholder: "eg. Luxury slim-fit suit perfect for big occassions!" %>
+      <%= f.input :size %>
+      <%= f.input :colour %>
+      <%= f.input :style, placeholder: "eg. slim fit, tuxedo, double-breasted" %>
+      <%= f.input :occasion, collection: [ "interview", "funeral", "wedding", "party", "date"]%>
+      <%= f.input :price, label: "Price per day" %>
+      <%= f.input :brand %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+      <%= f.submit "Submit", class: "btn btn-orange" %>
+    <% end %>
+  </div>
 </div>
-
-<!-- add a footer -->

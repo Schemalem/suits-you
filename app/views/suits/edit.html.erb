@@ -1,11 +1,10 @@
-<!-- create a header and add a nav bar -->
-<h1>Edit a Suit</h1>
-<div class="form">
-  <%= render "form", suit: @suit %>
-  <div class="navigation">
-    <p> <%= link_to 'Show', @suit %> </p>
-    <p> <%= link_to 'Back', suits_path %> </p>
+<div class="container">
+  <h1>Edit a Suit</h1>
+  <div class="form">
+    <%= render "form", suit: @suit %>
+    <div class="navigation">
+      <p> <%= link_to 'Show', @suit %> </p>
+      <p> <%= link_to 'Back', suits_path %> </p>
+    </div>
   </div>
 </div>
-
-<!-- add a footer -->

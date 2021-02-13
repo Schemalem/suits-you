@@ -33,7 +33,7 @@ class SuitsController < ApplicationController
   def create
     @suit = Suit.new(suit_params)
     @suit.user = current_user
-    if @suit.save
+    if @suit.save!
       redirect_to suit_path(@suit)
     else
       render :new

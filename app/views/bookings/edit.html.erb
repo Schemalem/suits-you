@@ -1,18 +1,16 @@
-<!-- create a header and add a nav bar -->
+<div class="container">
+  <h1>Edit your booking</h1>
 
+  <div class="form">
+    <%= simple_form_for [ @suit, @booking ] do |f| %>
+      <%= f.input :start_date %>
+      <%= f.input :end_date %>
+      <%= f.input :status, collection: ["Ordered", "Approved", "Shipped", "Delivered"]%>
+      <%= f.submit "Submit", class: "btn btn-orange" %>
+    <% end %>
+  </div>
 
-<h1>Edit your booking</h1>
-
-<div class="form">
-  <%= simple_form_for [ @suit, @booking ] do |f| %>
-    <%= f.input :start_date %>
-    <%= f.input :end_date %>
-    <%= f.input :status, collection: ["Ordered", "Approved", "Shipped", "Delivered"]%>
-    <%= f.submit "Submit", class: "btn btn-primary" %>
-  <% end %>
+  <div class="navigation">
+    <p><%= link_to "Back", booking_path(@booking) %></p>
+  </div>
 </div>
-
-<div class="navigation">
-  <p><%= link_to "Back", booking_path(@booking) %></p>
-</div>
-<!-- add a footer -->
