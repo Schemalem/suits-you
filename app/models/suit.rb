@@ -2,6 +2,7 @@ class Suit < ApplicationRecord
  belongs_to :user
  has_many :bookings, dependent: :destroy
 
+ validates :name, presence: true
  validates :size, presence: true
  validates :colour, presence: true
  validates :style, presence: true

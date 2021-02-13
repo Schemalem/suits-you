@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
 
   def create
     @suit = Suit.find(params[:suit_id])
-    @booking = Booking.new(booking_params)
+    @booking = Booking.new(booking_params_new)
     @booking.user = current_user
     @booking.suit = @suit
     if @booking.save
@@ -46,5 +46,9 @@ class BookingsController < ApplicationController
 
   def booking_params
     params.require(:booking).permit(:status, :start_date, :end_date)
+  end
+
+  def booking_params_new
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end
