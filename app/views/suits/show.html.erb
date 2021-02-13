@@ -34,6 +34,10 @@
   <%= @suit.colour %>
 </p>
 
+<% @suit.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
+
 <div class="navigation">
   <p><%= link_to 'Book this suit', new_suit_booking_path(@suit) %></p>
   <p><%= link_to 'Edit', edit_suit_path %>
@@ -44,3 +48,4 @@
 <!-- edit this suit -->
 </div>
 <!-- add a footer -->
+

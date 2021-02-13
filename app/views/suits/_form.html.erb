@@ -1,4 +1,3 @@
-
 <!-- create a header and add a nav bar -->
 <div class="form">
   <%= simple_form_for(suit) do |f| %>
@@ -9,6 +8,7 @@
     <%= f.input :occasion, collection: [ "interview", "funeral", "wedding", "party", "date"]%>
     <%= f.input :price %>
     <%= f.input :brand %>
+    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
     <%= f.submit %>
   <% end %>
 </div>
