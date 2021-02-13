@@ -5,6 +5,7 @@
   <table class="table">
     <thead>
       <tr>
+        <th>Name</th>
         <th>Brand</th>
         <th>Price</th>
         <th>Style</th>
@@ -15,6 +16,7 @@
     <tbody>
       <% @suits.each do |suit| %>
         <tr>
+          <td><%= suit.name %></td>
           <td><%= suit.brand %></td>
           <td><%= suit.price %></td>
           <td><%= suit.style  %></td>

@@ -1,4 +1,5 @@
-<!-- create a header and add a nav bar -->
+<!-- create a header and add a nav bar --.>
+
 
 <h1>Edit your booking</h1>
 
@@ -6,7 +7,7 @@
   <%= simple_form_for [ @suit, @booking ] do |f| %>
     <%= f.input :start_date %>
     <%= f.input :end_date %>
-    <%= f.input :status, collection: ["ordered", "approved", "shipped", "delivered"]%>
+    <%= f.input :status, collection: ["Ordered", "Approved", "Shipped", "Delivered"]%>
     <%= f.submit "Submit", class: "btn btn-primary" %>
   <% end %>
 </div>

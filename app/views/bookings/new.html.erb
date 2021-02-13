@@ -3,8 +3,6 @@
   <%= simple_form_for [ @suit, @booking ] do |f| %>
     <%= f.input :start_date %>
     <%= f.input :end_date %>
-    <%= f.input :status %>
-    <!-- status should be removed, as it should default to "ordered" -->
     <%= f.submit "Submit", class: "btn btn-primary" %>
   <% end %>
 </div>
