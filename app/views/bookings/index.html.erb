@@ -13,14 +13,14 @@
       </thead>
       <% @bookings.each do |booking| %>
         <tr>
-          <td>"name of the suit"</td>
+          <td><%= booking.suit.name %></td>
           <td><%= booking.start_date %></td>
           <td><%= booking.end_date %></td>
           <td><%= booking.status  %></td>
           <td>
           <td><%= link_to "Show details", booking %></td>
           <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
-          <td><%= link_to 'Delete booking' , method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Delete booking', booking_path(booking), method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
         </td>
       </tr>
