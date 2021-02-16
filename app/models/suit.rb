@@ -10,4 +10,11 @@ class Suit < ApplicationRecord
  validates :occasion, presence: true, inclusion: { in: %w(Interview Funeral Wedding Party Date) }
  validates :price, presence: true
  validates :brand, presence: true
+
+ include PgSearch::Model
+  pg_search_scope :search_by_name_and_occasion,
+    against: [ :name, :occasion],
+    using: {
+      tsearch: { prefix: true }
+    }
 end
