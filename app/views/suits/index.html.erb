@@ -2,7 +2,21 @@
   <h1>My Suits</h1>
 
   <div class="container">
-    <table class="table">
+    <div class="cards">
+      <% @suits.each do |suit| %>
+        <div class="card">
+        <%= link_to suit do %>
+           <div class="card-body">
+            <img src="https://images.unsplash.com/photo-1547508446-e097049cade7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" class="card-img-top">
+            <!-- add suit.photos somehow as a picture. Add placeholder pic -->
+            <h5><%= suit.name %></h5>
+            <p>£<%= suit.price %></p>
+          </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+    <!-- <table class="table">
       <thead>
         <tr>
           <th>Name</th>
@@ -26,7 +40,7 @@
           </tr>
         <% end %>
       </tbody>
-    </table>
+    </table> -->
   </div>
 
   <div class="navigation">
