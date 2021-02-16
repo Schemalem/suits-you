@@ -1,15 +1,22 @@
 <div class="container">
-  <div class="form">
-    <%= simple_form_for(suit) do |f| %>
-      <%= f.input :name, placeholder: "eg. Luxury slim-fit suit perfect for big occassions!" %>
-      <%= f.input :size %>
-      <%= f.input :colour %>
-      <%= f.input :style, placeholder: "eg. slim fit, tuxedo, double-breasted" %>
-      <%= f.input :occasion, collection: [ "Interview", "Funeral", "Wedding", "Party", "Date"]%>
-      <%= f.input :price, label: "Price per day" %>
-      <%= f.input :brand %>
-      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-      <%= f.submit "Submit", class: "btn btn-orange" %>
-    <% end %>
+  <div class="style-form">
+    <div class="form">
+      <%= simple_form_for(suit) do |f| %>
+        <%= f.input :name, placeholder: "eg. Luxury slim-fit suit perfect for big occassions!" %>
+        <%= f.input :size %>
+        <%= f.input :colour, as: :radio_buttons, input_html: { class: "tag-selector" },
+                  item_wrapper_class: 'tag-item', collection: ["Black", "Blue", "Brown", "Green", "Grey", "Navy", "Tan", "White", "Other"] %>
+        <%= f.input :style, placeholder: "eg. Slim-fit, tuxedo, double-breasted" %>
+        <%= f.input :occasion, as: :radio_buttons, input_html: { class: "tag-selector" },
+                  item_wrapper_class: 'tag-item',
+                  collection: ["Interview", "Wedding", "Party", "Date", "Funeral", "Prom"]%>
+        <%= f.input :price, label: "Price per day" %>
+        <%= f.input :brand %>
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+        <%= f.submit "Submit", class: "btn btn-orange" %>
+      <% end %>
+    </div>
   </div>
 </div>
+
+<!-- In css, next .style-form and then use selectors -->

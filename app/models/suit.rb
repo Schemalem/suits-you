@@ -7,7 +7,7 @@ class Suit < ApplicationRecord
  validates :size, presence: true
  validates :colour, presence: true
  validates :style, presence: true
- validates :occasion, presence: true, inclusion: { in: %w(Interview Funeral Wedding Party Date) }
+ validates :occasion, presence: true, inclusion: { in: %w(Interview Funeral Wedding Party Date Prom) }
  validates :price, presence: true
  validates :brand, presence: true
 end

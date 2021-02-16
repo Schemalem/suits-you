@@ -2,6 +2,11 @@
   background-color: $orangeish;
   color: $white;
   border-radius: 5px;
+
+  &:hover {
+  background-color: $sienna;
+  color: $white;
+  }
 }
 
 .btn-gray {
@@ -9,5 +14,10 @@
   color: $white;
   border-radius: 5px;
   margin-right: 10px;
+
+  &:hover {
+  background-color: #497075;
+  color: $white;
+  }
 }
 

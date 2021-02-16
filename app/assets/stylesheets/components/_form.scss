@@ -1,0 +1,30 @@
+.style-form {
+
+  .tag-item {
+    color: blue;
+    display: inline-block;
+  }
+
+  .tag-selector {
+    position: absolute;
+    transform: scale(0);
+  }
+
+  .tag-selector + label {
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 8px;
+    padding: 0.1rem 1rem;
+    background-color: $greyish;
+    color: $dirty-green;
+    border: 1px solid $dark-slate-gray;
+    margin-right: 0.6rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .tag-selector:checked + label {
+    background-color: $dirty-green;
+    color: white;
+    }
+
+}
