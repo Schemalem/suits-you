@@ -4,8 +4,8 @@
   <div class="style-form">
     <div class="form">
       <%= simple_form_for [ @suit, @booking ] do |f| %>
-        <%= f.input :start_date %>
-        <%= f.input :end_date %>
+        <%= f.input :start_date, as: :date, html5: true %>
+        <%= f.input :end_date, as: :date, html5: true %>
         <%= f.input :status, as: :radio_buttons, input_html: { class: "tag-selector" },
                     item_wrapper_class: 'tag-item',
                     collection: ["Ordered", "Approved", "Shipped", "Delivered"]%>
