@@ -6,6 +6,9 @@
   </div>
 
   <div class="navigation">
-    <p><%= link_to 'Back', suits_path %></p>
+    <p><%= link_to suits_path, class: "btn btn-gray" do%>
+      <i class="fas fa-arrow-circle-left"></i><span> Back</span>
+    <% end %>
+    </p>
   </div>
 </div>
