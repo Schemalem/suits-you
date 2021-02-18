@@ -1,10 +1,11 @@
 <!-- create a header and add a nav bar -->
 <div class="container">
   <div>
-    <h1> My bookings </h1>
+    <h1> Booking Overview </h1>
   </div>
 
   <div class="container">
+    <h3> Suits I'm Borrowing </h3>
     <table class="table">
       <tbody>
         <thead>
@@ -14,18 +15,55 @@
           <th>Status</th>
         </thead>
         <% @bookings.each do |booking| %>
-          <tr>
-            <td><%= booking.suit.name %></td>
-            <td><%= booking.start_date %></td>
-            <td><%= booking.end_date %></td>
-            <td><%= booking.status  %></td>
-            <td>
-            <td><%= link_to "Show details", booking %></td>
-            <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
-            <td><%= link_to 'Delete booking', booking_path(booking), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% if booking.user_id == current_user.id %>
+          <%#= current_user.id %>
+          <%#= booking.user_id %>
+            <tr>
+              <td><%= booking.suit.name %></td>
+              <td><%= booking.start_date %></td>
+              <td><%= booking.end_date %></td>
+              <td><%= booking.status  %></td>
+              <td><%= booking.user_id  %></td>
+              <td>
+              <td><%= link_to "Show details", booking %></td>
+              <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
+              <td><%= link_to 'Delete booking', booking_path(booking), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>
           <% end %>
-          </td>
-        </tr>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="container">
+    <h3> Suits I'm Lending </h3>
+    <table class="table">
+      <tbody>
+        <thead>
+          <th>Suit name</th>
+          <th>Start date</th>
+          <th>End date</th>
+          <th>Status</th>
+        </thead>
+        <% @bookings.each do |booking| %>
+          <% if booking.suit.user_id == current_user.id %>
+          <%#= current_user.id %>
+          <%#= booking.user_id %>
+            <tr>
+              <td><%= booking.suit.name %></td>
+              <td><%= booking.start_date %></td>
+              <td><%= booking.end_date %></td>
+              <td><%= booking.status  %></td>
+              <td><%= booking.user_id  %></td>
+              <td>
+              <td><%= link_to "Show details", booking %></td>
+              <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
+              <td><%= link_to 'Delete booking', booking_path(booking), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>
+          <% end %>
+            </td>
+          </tr>
       </tbody>
     </table>
   </div>

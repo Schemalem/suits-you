@@ -1,8 +1,10 @@
 class SuitsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     if params[:query].present?
       @suits = Suit.search_form(params[:query])
-    else 
+    else
       @suits = Suit.all
     end
   end
