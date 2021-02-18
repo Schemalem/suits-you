@@ -20,10 +20,13 @@
         </div>
         <div class="header-main-logo d-flex align-self-stretch align-items-center justify flex-equal">
           <div class="search-module d-flex align-self-stretch">
-            <input type="search" id="form1" class="form-control"  placeholder="Search"/>
-              <label class="form-label" for="form1"></label>
-              <button type="button" class="btn">
-                <i class="fas fa-search"></i>
+             <%= form_tag suits_path, method: :get do %>
+             <%= text_field_tag :query,
+               params[:query],
+               class: "form-control",
+             placeholder: "Find a suit"
+             %>
+             <% end %>
               </button>
           </div>
         </div>

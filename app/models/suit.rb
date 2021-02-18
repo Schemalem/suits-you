@@ -12,8 +12,8 @@ class Suit < ApplicationRecord
  validates :brand, presence: true
 
  include PgSearch::Model
-  pg_search_scope :search_by_name_and_occasion,
-    against: [ :name, :occasion],
+ pg_search_scope :search_form,
+    against: [ :name, :occasion, :size, :colour, :style, :price, :brand],
     using: {
       tsearch: { prefix: true }
     }
