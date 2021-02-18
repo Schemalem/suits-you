@@ -22,6 +22,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params_new)
     @booking.user = current_user
     @booking.suit = @suit
+    @booking.total_cost = (@booking.end_date - @booking.start_date).to_i * @suit.price
     if @booking.save
       redirect_to booking_path(@booking)
     else
