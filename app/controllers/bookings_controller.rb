@@ -3,15 +3,6 @@ class BookingsController < ApplicationController
     @bookings = Booking.all
   end
 
-  # def index
-  #   @bookings = Booking.all
-  #   if @booking.user_id == current_user
-  #     raise
-  #     @bookings = Booking.find_by_user_id(@booking.user)
-  #   end
-  #   # @bookings = Booking.all
-  # end
-
   def new
     @booking = Booking.new
     @suit = Suit.find(params[:suit_id])
