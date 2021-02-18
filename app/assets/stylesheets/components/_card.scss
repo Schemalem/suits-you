@@ -23,7 +23,12 @@
   }
 
   a:hover {
-    color: $dirty-green;
+    h5 {
+      color: $dirty-green;
+    }
+    p {
+      color: $orangeish;
+    }
   }
 
   img {

@@ -3,8 +3,8 @@
   <div class="form">
     <%= render "form", suit: @suit %>
     <div class="navigation">
-      <p> <%= link_to 'Show', @suit %> </p>
-      <p> <%= link_to 'Back', suits_path %> </p>
+      <p> <%= link_to 'Show', @suit, class:"btn btn-orange"%> <%= link_to suits_path, class:"btn btn-gray" do%> <i class="fas fa-arrow-circle-left"></i><span> Back to suits</span>
+    <% end %> </p>
     </div>
   </div>
 </div>
