@@ -1,7 +1,13 @@
 <div class="container">
-  <h1>My Suits</h1>
+   <div class="top-page">
+     <h1>Suits</h1>
+      <div class="navigation">
+        <p><%= link_to 'New Suit', new_suit_path, class: "btn btn-orange" %></p>
+      </div>
+   </div>
 
-  <div class="container">
+
+  <div class="container d-inline">
     <div class="cards">
       <% @suits.each do |suit| %>
         <div class="card">
@@ -44,7 +50,7 @@
   </div>
 
   <div class="navigation">
-    <p><%= link_to 'New Suit', new_suit_path, class: "btn btn-orange" %> </p>
-    <p><%= link_to "Back to home page", root_path %> </p>
+    <p><%= link_to 'New Suit', new_suit_path, class: "btn btn-orange" %> <%= link_to root_path, class: "btn btn-gray" do%> <i class="fas fa-arrow-circle-left"></i><span> Back to homepage</span>
+    <% end %> </p>
   </div>
 </div>

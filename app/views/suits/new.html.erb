@@ -1,14 +1,13 @@
-<div class="container">
+<div class="container ">
   <h1>Create a suit</h1>
-
-  <div class="form">
-    <%= render "form", suit: @suit %>
+  <div class="container">
+    <div class="form">
+      <%= render "form", suit: @suit %>
+      </div>
+      <div class="navigation">
+        <p id="back-button"><%= link_to suits_path, class: "btn btn-gray" do%> <i class="fas fa-arrow-circle-left"></i><span> Back</span>
+        <% end %> </p>
+    </div>
   </div>
 
-  <div class="navigation">
-    <p><%= link_to suits_path, class: "btn btn-gray" do%>
-      <i class="fas fa-arrow-circle-left"></i><span> Back</span>
-    <% end %>
-    </p>
-  </div>
 </div>

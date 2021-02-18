@@ -40,12 +40,10 @@
   <% end %>
 
   <div class="navigation">
-    <p><%= link_to 'Book this suit', new_suit_booking_path(@suit), class: "btn btn-orange" %></p>
-    <p><%= link_to 'Edit', edit_suit_path %>
-    <p><%= link_to 'See all bookings', bookings_path %>
-      <!-- show only bookings for this suit -->
-    <p><%= link_to 'Delete', suit_path(@suit), method: :delete %></p>
-    <p><%= link_to 'Back', suits_path %></p>
+    <p><%= link_to 'Book this suit', new_suit_booking_path(@suit), class:"btn btn-orange" %> <%= link_to 'Delete', suit_path(@suit), method: :delete, class:"btn btn-orange"%> <%= link_to 'Edit', edit_suit_path, class:"btn btn-orange" %> </p>
+    <p> <%= link_to 'See all bookings', bookings_path, class:"btn btn-orange" %> </p>
+    <p><%= link_to suits_path, class:"btn btn-gray" do%> <i class="fas fa-arrow-circle-left"></i><span> Back to suits</span>
+    <% end %> </p>
   <!-- edit this suit -->
   </div>
 </div>
