@@ -20,14 +20,13 @@
           <%#= booking.user_id %>
             <tr>
               <td><%= booking.suit.name %></td>
+              <td><%= booking.status  %></td>
               <td><%= booking.start_date %></td>
               <td><%= booking.end_date %></td>
-              <td><%= booking.status  %></td>
-              <td><%= booking.user_id  %></td>
               <td>
-              <td><%= link_to "Show details", booking %></td>
-              <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
-              <td><%= link_to 'Delete booking', booking_path(booking), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td class="active-links"><%= link_to "Show details", booking %></td>
+              <td class="active-links"><%= link_to 'Edit', edit_booking_path(booking) %></td>
+              <td class="active-links"><%= link_to 'Delete booking', booking_path(booking), method: :delete, data: { confirm: 'Are you sure?' } %></td>
             <% end %>
           <% end %>
             </td>
@@ -55,7 +54,6 @@
               <td><%= booking.start_date %></td>
               <td><%= booking.end_date %></td>
               <td><%= booking.status  %></td>
-              <td><%= booking.user_id  %></td>
               <td>
               <td><%= link_to "Show details", booking %></td>
               <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
@@ -69,7 +67,7 @@
   </div>
 
   <div class="navigation-bar">
-    <p><%= link_to "My suits", suits_path %></p>
-    <p><%= link_to "Back to home page", root_path %> </p>
+    <p><%= link_to "My suits", suits_path, class:"btn btn-orange" %> <%= link_to root_path, class:"btn btn-gray" do%> <i class="fas fa-arrow-circle-left"></i><span> Back to homepage</span>
+    <% end %> </p>
   </div>
 </div>

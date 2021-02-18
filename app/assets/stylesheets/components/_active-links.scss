@@ -1,0 +1,13 @@
+.active-links {
+  text-wrap: auto;
+
+  a {
+    font-size: 15px;
+    text: inline;
+  }
+
+  a:hover {
+  text-decoration: none;
+  color: $sienna;
+  }
+}
