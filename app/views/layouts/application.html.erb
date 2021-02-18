@@ -16,7 +16,9 @@
     <div class="navbar fixed-top navbar-lewagon navbar-collapse">
       <div class="container">
         <div class="main-logo d-flex align-self-stretch align-items-center justify flex-equal">
+          <%= link_to root_path do %>
           <img id="logo" src="https://pngimg.com/uploads/suit/suit_PNG93235.png"height="40px">
+          <% end %>
         </div>
         <div class="header-main-logo d-flex align-self-stretch align-items-center justify flex-equal">
           <div class="search-module d-flex align-self-stretch">
@@ -30,9 +32,9 @@
               </button>
           </div>
         </div>
-        <div class="justify-content-end align-self-stretch d-flex flex-equal">
+        <!-- <div class="justify-content-end align-self-stretch d-flex flex-equal">
           <button type="button" class="btn btn-border">Account</button>
-        </div>
+        </div> -->
          <div class="justify-content-end align-self-stretch d-flex flex-equal">
           <%= link_to 'Browse Suits', suits_path, class: "btn btn-gray" %>
           <%= link_to 'Login', new_user_session_path, class: "btn btn-orange" %>
