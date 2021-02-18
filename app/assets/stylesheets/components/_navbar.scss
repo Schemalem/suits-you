@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: $silver;
+  background: $greyish;
+  display: flexbox;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -13,4 +14,16 @@
 
 .fas {
   color: $orangeish;
+}
+
+.avatar {
+    border: 2px solid $orangeish;
+}
+
+.dropdown-item {
+  border: 1px solid $greyish;
+}
+
+.form-control {
+  // align-items: right;
 }
