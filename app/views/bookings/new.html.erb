@@ -3,11 +3,8 @@
     <%= simple_form_for [ @suit, @booking ] do |f| %>
       <%= f.input :start_date, as: :date, html5: true %>
       <%= f.input :end_date, as: :date, html5: true %>
-      <%= f.submit "Submit", class: "btn btn-orange" %>
+      <%= f.submit "Submit", class: "btn btn-orange" %> <%= link_to suit_path(@suit), class:"btn btn-gray" do%> <i class="fas fa-arrow-circle-left"></i><span> Back </span>
     <% end %>
-  </div>
-
-  <div class="navigation">
-    <p><%= link_to "Back", suit_path(@suit) %></p>
+    <% end %>
   </div>
 </div>
