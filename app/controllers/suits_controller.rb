@@ -1,6 +1,10 @@
 class SuitsController < ApplicationController
   def index
-    @suits = Suit.all
+    if params[:query].present?
+      @suits = Suit.search_form(params[:query])
+    else 
+      @suits = Suit.all
+    end
   end
 
   def new
