@@ -6,6 +6,9 @@
       </div>
    </div>
 
+   <div class="pagination">
+    <%== pagy_bootstrap_nav(@pagy).html_safe %>
+    </div>
 
   <div class="container d-inline">
     <div class="cards">
@@ -48,6 +51,9 @@
       </tbody>
     </table> -->
   </div>
+<div class="pagination">
+  <%== pagy_bootstrap_nav(@pagy).html_safe %>
+</div>
 
   <div class="navigation">
     <p><%= link_to 'New Suit', new_suit_path, class: "btn btn-orange" %> <%= link_to root_path, class: "btn btn-gray" do%> <i class="fas fa-arrow-circle-left"></i><span> Back to homepage</span>

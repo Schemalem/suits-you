@@ -1,0 +1,20 @@
+.pagination {
+  justify-content: center;
+
+  .page-item:first-child .page-link {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  .page-item:last-child .page-link {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  .page-link {
+    color: $orangeish;
+  }
+  .page-item.active .page-link {
+      border-color: $orangeish;
+      background-color: $orangeish;
+  }
+}
