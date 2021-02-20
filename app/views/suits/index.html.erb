@@ -6,6 +6,9 @@
       </div>
    </div>
 
+  <div class="pagination">
+    <%== pagy_bootstrap_nav(@pagy).html_safe %>
+  </div>
 
   <div class="container d-inline">
     <div class="cards">
@@ -13,10 +16,14 @@
         <div class="card">
         <%= link_to suit do %>
            <div class="card-body">
-            <img src="https://images.unsplash.com/photo-1547508446-e097049cade7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" class="card-img-top">
+            <img src="https://images.unsplash.com/photo-1572325879775-5e8f8b20439f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" class="card-img-top">
             <!-- add suit.photos somehow as a picture. Add placeholder pic -->
             <h5><%= suit.name %></h5>
-            <p>£<%= suit.price %></p>
+              <div id="card-details">
+              <p>£<%= suit.price %> per day</p>
+              <p><%= suit.brand %></p>
+              <p>Size: <%=suit.size %> </p>
+            </div>
           </div>
           <% end %>
         </div>
@@ -48,6 +55,9 @@
       </tbody>
     </table> -->
   </div>
+<div class="pagination">
+  <%== pagy_bootstrap_nav(@pagy).html_safe %>
+</div>
 
   <div class="navigation">
     <p><%= link_to 'New Suit', new_suit_path, class: "btn btn-orange" %> <%= link_to root_path, class: "btn btn-gray" do%> <i class="fas fa-arrow-circle-left"></i><span> Back to homepage</span>
