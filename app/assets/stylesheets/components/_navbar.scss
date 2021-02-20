@@ -17,7 +17,7 @@
 }
 
 .avatar {
-    border: 2px solid $orangeish;
+  border: 2px solid $orangeish;
 }
 
 .dropdown-item {
@@ -27,3 +27,24 @@
 .form-control {
   // align-items: right;
 }
+
+.logo-text {
+  color: black;
+}
+
+.main-logo a {
+  text-decoration: none !important;
+}
+
+// .navbar-lewagon {
+//   justify-content: space-between;
+//   background: white;
+// }
+
+// .navbar-lewagon .navbar-collapse {
+//   flex-grow: 0;
+// }
+
+// .navbar-lewagon .navbar-brand img {
+//   width: 40px;
+// }
