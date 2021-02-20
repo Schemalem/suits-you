@@ -5,7 +5,7 @@
   <p><%= @booking.total_cost %></p>
 
   <div class="navigation">
-    <p><%= link_to "Edit", edit_booking_path, class="btn btn-orange"%><%= link_to "Delete", booking_path(@booking), method: :delete, data: { confirm: "Are you sure?" }, class="btn btn-orange" %> <%= link_to "Back", bookings_path, class="btn btn-orange" %></p> <!-- link to an actual suit, not My suits -->
+    <p><%= link_to "Edit", edit_booking_path(@booking), class: "btn btn-orange" %> <%= link_to "Delete", booking_path(@booking), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-orange" %> <%= link_to "Back", bookings_path, class: "btn btn-orange" %></p>
   </div>
   <!-- all the suit details -->
 </div>
