@@ -1,7 +1,7 @@
 .btn-orange {
   background-color: $orangeish;
   color: $white;
-  border-radius: 5px;
+  border-radius: 2px;
 
   &:hover {
   background-color: $sienna;
@@ -10,9 +10,9 @@
 }
 
 .btn-gray {
-  background-color: $dark-slate-gray;
+  background-color: #243746;
   color: $white;
-  border-radius: 5px;
+  border-radius: 2px;
   margin-right: 10px;
 
   &:hover {
