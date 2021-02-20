@@ -3,9 +3,9 @@ class SuitsController < ApplicationController
 
   def index
     if params[:query].present?
-      @pagy, @suits = pagy(Suit.search_form(params[:query]), items: 15)
+      @pagy, @suits = pagy(Suit.search_form(params[:query].order(name: :asc)), items: 15)
     else
-      @pagy, @suits = pagy(Suit.all, items: 15)
+      @pagy, @suits = pagy(Suit.all.order(name: :asc), items: 15)
     end
   end
 
