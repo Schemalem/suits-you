@@ -1,14 +1,15 @@
 #main-footer {
   background-color: $dirty-green;
-  position: sticky;
-  bottom: 0;
+  // position: sticky;
+  // bottom: 0;
   width: 100%;
   height: 2.5rem;
   text-align: center;
+  padding: 40px;
 
     .social-media {
-    margin: 8px;
-    padding: 8px;
+    // margin: 8px;
+    // padding: 8px;
 
     a {
       color: $orangeish;
