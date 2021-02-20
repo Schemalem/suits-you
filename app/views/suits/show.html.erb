@@ -1,67 +1,48 @@
 <div class="container">
-  <h1> <%= @suit.name %> </h1>
-  <p>
-    <strong>Name:</strong>
-    <%= @suit.name %>
-  </p>
-
-  <p>
-    <strong>Brand:</strong>
-    <%= @suit.brand %>
-  </p>
-
-  <p>
-    <strong>Price</strong>
-    <%= @suit.price %>
-  </p>
-
-  <p>
-    <strong>Style:</strong>
-    <%= @suit.style %>
-  </p>
-
-  <p>
-    <strong>Size:</strong>
-    <%= @suit.size %>
-  </p>
-
-  <p>
-    <strong>Occasion:</strong>
-    <%= @suit.occasion %>
-  </p>
-
-  <p>
-    <strong>Colour:</strong>
-    <%= @suit.colour %>
-  </p>
-
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <% @suit.photos.each_with_index do |photo, index|  %>
-        <% if index == 0 %>
-          <div class="carousel-item active">
-            <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill, class:"d-block w-100" %>
-          </div>
-        <% else %>
-            <div class="carousel-item">
-              <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill, class:"d-block w-100" %>
-            </div>
-        <% end %> 
-      <% end %>
+  <div class="top-page">
+    <h1> <%= @suit.name %> </h1>
+    <div class="navigation">
+      <p><%= link_to 'Book this suit', new_suit_booking_path(@suit), class:"btn btn-orange" %> </p>
     </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+  </div>
+  <div class="bordered-container">
+    <div class="carousel">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <% @suit.photos.each_with_index do |photo, index|  %>
+            <% if index == 0 %>
+              <div class="carousel-item active">
+                <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill, class:"d-block w-100" %>
+              </div>
+            <% else %>
+                <div class="carousel-item">
+                  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill, class:"d-block w-100" %>
+                </div>
+            <% end %>
+          <% end %>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+    <div id="suits-details">
+      <p>Price: £<%= @suit.price %> per day</p>
+      <p>Brand: <%= @suit.brand %></p>
+      <p>Size: <%= @suit.size %> </p>
+      <p>Colour: <%= @suit.colour %></p>
+      <p>Style: <%= @suit.style %></p>
+      <p>Great for: <%= @suit.occasion %></p>
+    </div>
+  </div>
 
   <div class="navigation">
     <p><%= link_to 'Book this suit', new_suit_booking_path(@suit), class:"btn btn-orange" %> <%= link_to 'Delete', suit_path(@suit), method: :delete, class:"btn btn-orange"%> <%= link_to 'Edit', edit_suit_path, class:"btn btn-orange" %> </p>
-    <p> <%= link_to 'See all bookings', bookings_path, class:"btn btn-orange" %> </p>
     <p><%= link_to suits_path, class:"btn btn-gray" do%> <i class="fas fa-arrow-circle-left"></i><span> Back to suits</span>
     <% end %> </p>
   <!-- edit this suit -->

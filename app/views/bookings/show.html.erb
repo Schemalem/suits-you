@@ -4,10 +4,8 @@
   <p> <%= @booking.end_date %> </p>
   <p><%= @booking.total_cost %></p>
 
-  <div class="navigation-bar">
-    <p><%= link_to "Edit", edit_booking_path%></p>
-    <p><%= link_to "Delete", booking_path(@booking), method: :delete, data: { confirm: "Are you sure?" } %></p>
-    <p><%= link_to "Back", bookings_path %></p> <!-- link to an actual suit, not My suits -->
+  <div class="navigation">
+    <p><%= link_to "Edit", edit_booking_path, class="btn btn-orange"%><%= link_to "Delete", booking_path(@booking), method: :delete, data: { confirm: "Are you sure?" }, class="btn btn-orange" %> <%= link_to "Back", bookings_path, class="btn btn-orange" %></p> <!-- link to an actual suit, not My suits -->
   </div>
   <!-- all the suit details -->
 </div>
